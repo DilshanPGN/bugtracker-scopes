@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.bugtracker</groupId>
-    <artifactId>bugtracker-scopes</artifactId>
+    <artifactId>bugtrackercli</artifactId>
     <version>1.0</version>
-    <name>bugtracker-scopes</name>
+    <name>bugtrackercli-v2</name>
     <description>BugTracker Application</description>
     <properties>
         <java.version>21</java.version>

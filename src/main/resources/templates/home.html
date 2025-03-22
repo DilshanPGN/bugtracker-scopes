@@ -25,7 +25,7 @@
                     </div>
                     <div class="p-2 bd-highlight">
                         <img th:src="${user.picture == null} ? '/images/person.svg' : ${user.picture}"
-                             class="img-circle" width="35" height="35">
+                             class="rounded-circle" width="35" height="35">
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                         </tbody>
                     </table>
 
-                    <a th:href="@{/bugtracker/ui/show-bugs}" class="btn btn-primary mb-3">Show Dashboard</a>
+                    <a th:href="@{/bugtracker/ui/show-bugs}" class="btn btn-primary">Show Dashboard</a>
 
                 </div>
 
@@ -84,15 +84,15 @@
 
                     <ul class="nav nav-tabs justify-content-center" id="tokenTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="access-tab" data-bs-toggle="tab" data-bs-target="#accesstoken"
-                                    type="button" role="tab" aria-controls="accesstoken" aria-selected="true">
-                                Access Token
+                            <button class="nav-link active" id="id-tab" data-bs-toggle="tab" data-bs-target="#idtoken"
+                                    type="button" role="tab" aria-controls="idtoken" aria-selected="true">
+                                ID Token
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="id-tab" data-bs-toggle="tab" data-bs-target="#idtoken"
-                                    type="button" role="tab" aria-controls="idtoken" aria-selected="false">
-                                ID Token
+                            <button class="nav-link" id="access-tab" data-bs-toggle="tab" data-bs-target="#accesstoken"
+                                    type="button" role="tab" aria-controls="accesstoken" aria-selected="false">
+                                Access Token
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
@@ -105,14 +105,14 @@
 
                     <div class="tab-content" id="tokenContent">
 
-                        <!-- Show the base64 decoded Access Token -->
-                        <div class="tab-pane fade show active" id="accesstoken" role="tabpanel" aria-labelledby="access-tab">
-                            <textarea th:text="${accesstoken}" readonly rows="18" class="token" style="width:100%"/>
+                        <!-- Show the base64 decoded ID Token -->
+                        <div class="tab-pane fade show active" id="idtoken" role="tabpanel" aria-labelledby="id-tab">
+                            <textarea th:text="${idtoken}" readonly rows="18" class="token" style="width: 100%"/>
                         </div>
 
-                        <!-- Show the base64 decoded ID Token -->
-                        <div class="tab-pane fade" id="idtoken" role="tabpanel" aria-labelledby="id-tab">
-                            <textarea th:text="${idtoken}" readonly rows="18" class="token" style="width: 100%"/>
+                        <!-- Show the base64 decoded Access Token -->
+                        <div class="tab-pane fade" id="accesstoken" role="tabpanel" aria-labelledby="access-tab">
+                            <textarea th:text="${accesstoken}" readonly rows="18" class="token" style="width:100%"/>
                         </div>
 
                         <!-- Show the base64 decoded Refresh Token -->
